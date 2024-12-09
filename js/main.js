@@ -89,3 +89,52 @@ const typed = new Typed('.multiple-text', {
     showCursor: true,
     cursorChar: "|",
 })
+
+
+//form Do not go form after form submition -------------------------------------------------
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const form = event.target;
+    const formData = new FormData(form); // Collect form data
+
+    // Submit the form using Fetch API
+    fetch("https://formspree.io/f/movqzwol", {
+        method: "POST",
+        body: formData,
+        headers: {
+            Accept: "application/json", // Required for JSON response
+        },
+    })
+        .then((response) => {
+            if (response.ok) {
+                // Form submission successful
+                alert("Message sent successfully! I will get back to you as soon as possible.");
+                form.reset(); // Clear the form
+            } else {
+                throw new Error("Form submission failed.");
+            }
+        })
+        .catch((error) => {
+            // Handle errors
+            console.error("Error:", error);
+            alert("Error submitting form. Please try again.");
+        });
+});
+
+
+//Certificates zoom on --------------------------------------------------------------------
+// Show the modal with the clicked image
+function showModal(img) {
+    const modal = document.getElementById("certificateModal");
+    const modalImg = document.getElementById("modalImage");
+
+    modal.style.display = "flex"; // Use flex for centering
+    modalImg.src = img.src;
+}
+
+// Close the modal when clicking outside the image
+function closeModal() {
+    const modal = document.getElementById("certificateModal");
+    modal.style.display = "none";
+}
