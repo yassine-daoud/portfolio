@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font-Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Yassine Daoud</title>
-    <!-- YD Icon -->
-    <link rel="icon" href="img/YD_Logo.png" type="image/png">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Yassine Daoud">
+        <meta name="description" content="I'm Yassine Daoud, a Full Stack Developer specializing in React and Laravel. I focus on building dynamic, responsive web applications with clean code and innovative solutions.">
+        <meta name="keywords" content="Yassine Daoud, Full Stack Developer, React, Laravel, Web Development, Portfolio">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Yassine Daoud - Full Stack Developer">
+        <meta property="og:description" content="Explore my portfolio to see my projects, skills, and professional journey as a Full Stack Developer specializing in React and Laravel.">
+        <meta property="og:image" content="img/profile.png">
+        <meta property="og:url" content="https://www.yassine-daoud.site/">
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Yassine Daoud - Full Stack Developer">
+        <meta name="twitter:description" content="Explore my portfolio to see my projects, skills, and professional journey as a Full Stack Developer specializing in React and Laravel.">
+        <meta name="twitter:image" content="img/profile.png">
+    
+        <title>Yassine Daoud - Full Stack Web Developer</title>
+        <link rel="icon" href="img/icon-1.png" type="image/png">
+    
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        
+          <!-- SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- SEO -->
+        <link rel="canonical" href="https://www.yassine-daoud.site/">
+    
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Yassine Daoud - Full Stack Developer",
+            "description": "Explore my portfolio to see my projects, skills, and professional journey as a Full Stack Developer specializing in React and Laravel.",
+            "url": "https://www.yassine-daoud.site/",
+            "author": {
+                "@type": "Person",
+                "name": "Yassine Daoud"
+            }
+        }
+        </script>
+    </head>
+    
 <body>
-    <!-- Header Design -->
+  <!-- Header Design -->
     <header class="header">
-        <a href="#home" class="logo">DAOUD<span class="dot">.</span><span class="dev">DEV</span> </a>
+        <a href="#home" class="logo">
+            YASSINE<span class="dot">.</span><span class="dev">DAOUD</span>
+            <!-- <img class="logo-img" src="img/YD_Logo.png" alt="Yassine Daoud Logo"> -->
+            <!-- <span class="logo-name">YASSINE <span class="logo-2"> DAOUD</span></span> -->
+        </a>
         <i class="fa-solid fa-bars" id="menu-icon" aria-label="Menu"></i>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -22,32 +70,31 @@
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
-            <!-- <a href="#certificates">Cerificates</a> -->
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Home Section -->
+    <main>
+            <!-- Hero Section -->
     <section class="home" id="home">
         <div class="home-content">
             <div class="intro">
                 <h1 class="name">Hello, I'm <span>Yassine Daoud</span></h1>
                 <h3 class="title"><span class="multiple-text"></span></h3>
                 <p class="description">
-                    I'm Yassine Daoud, a Full Stack Developer specializing in React and Laravel. <br>
-                    I focus on building dynamic, responsive web applications with clean code and innovative solutions. From user interfaces to back-end challenges, I'm dedicated to delivering seamless digital experiences.
+                    Passionate about crafting dynamic, user-friendly web applications with modern technologies. Specializing in React and Laravel, I create solutions that blend innovation with performance to deliver exceptional digital experiences.
                 </p>
             </div>
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/daoudyassine/" aria-label="LinkedIn" target="_blank" ><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/yassine-daoud" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/d.yaassine/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://linktr.ee/daoud.dev/" aria-label="Linktree" target="_blank"><i class="fa-solid fa-link"></i></i></a>
             </div>
-            <a href="http://daoudyassine.great-site.net/wp-content/uploads/2024/12/Daoud-Yassine-CV.pdf" class="btn" target="_blank">Download CV <i class="fa-solid fa-download"></i></a>
+            <a href="https://drive.google.com/file/d/1ZM45fRGqxg35f6fQhenfuNYhv3qUNW1E/view?usp=drive_link" class="btn primary-btn" target="_blank">Download CV <i class="fa-solid fa-download"></i></a>
         </div>
         <div class="home-img">
-            <img src="img/profilee.png" alt="Portrait of Yassine Daoud">
+            <img src="img/hero-5.png" alt="Portrait of Yassine Daoud">
         </div>
     </section>
 
@@ -58,13 +105,14 @@
         </div>
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
-            <p>
-                I am a dedicated and enthusiastic Full Stack Developer with a proven track record of creating dynamic, user-centric web applications. My expertise spans a range of modern technologies, including React, Laravel, and other cutting-edge tools that enable me to deliver innovative and impactful solutions. I thrive on solving complex problems and continuously seek opportunities to refine my skills and stay ahead in the ever-evolving tech landscape.
-            </p>
-            <p>
-                Driven by a passion for clean, efficient code and a user-first approach, I aim to build applications that not only meet but exceed expectations. Whether working independently or collaboratively, I bring adaptability, attention to detail, and a commitment to excellence to every project.
-            </p>
-            <a href="https://www.linkedin.com/in/daoudyassine/" target="_blank" class="btn">Contact Me</a>
+            <p><strong>I’m a Web Developer from Morocco</strong>, passionate about creating responsive, user-friendly websites that deliver exceptional experiences. With expertise in technologies like <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React</strong>, and <strong>Laravel</strong>, I build solutions that are both functional and visually engaging.</p>
+
+            <p>I thrive on solving complex problems and transforming them into intuitive designs that users love. Continuously learning and staying updated with the latest web trends, I aim to provide cutting-edge solutions that help businesses grow online.</p>
+            
+            <p>My goal is to craft websites that not only look great but also drive results and contribute to success.</p>
+            
+            <a href="#portfolio" class="btn primary-btn">View My Work</a>
+            <a href="#contact" class="btn secondary-btn">Get in Touch</a>
         </div>
     </section>
 
@@ -159,30 +207,45 @@
     
         <!-- Other Skills -->
         <div class="skills-column">
-            <h3 class="skills-title">
-                <i class="fas fa-tools"></i> <br />Other Skills
-            </h3>
-            <div class="skills-row">
-                <div class="skill-item">
-                    <i class="fas fa-code-branch" aria-label="Git"></i>
-                    <span>Git</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-github" aria-label="GitHub"></i>
-                    <span>GitHub</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-sync" aria-label="Agile"></i>
-                    <span>Agile (Scrum, Kanban)</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-shield-alt" aria-label="RESTful APIs"></i>
-                    <span>RESTful APIs</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-docker" aria-label="Docker"></i>
-                    <span>Docker</span>
-                </div>
+        <h3 class="skills-title">
+            <i class="fas fa-tools"></i> <br />Other Skills
+        </h3>
+        <div class="skills-row">
+            <div class="skill-item">
+                <i class="fab fa-wordpress" aria-label="WordPress"></i>
+                <span>WordPress</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-search" aria-label="SEO"></i>
+                <span>SEO</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-code-branch" aria-label="Git"></i>
+                <span>Git</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-github" aria-label="GitHub"></i>
+                <span>GitHub</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-sync" aria-label="Agile"></i>
+                <span>Agile (Scrum, Kanban)</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-shield-alt" aria-label="RESTful APIs"></i>
+                <span>RESTful APIs</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-docker" aria-label="Docker"></i>
+                <span>Docker</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-chart-line" aria-label="Analytics"></i>
+                <span>Analytics</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-envelope-open-text" aria-label="Email Marketing"></i>
+                <span>Email Marketing</span>
             </div>
         </div>
     </section>
@@ -190,6 +253,19 @@
     <!-- Experience Design -->
     <section class="experience" id="experience">
         <h2 class="heading"><span>Experience</span></h2>
+
+            <div class="experience-item">
+                <h3>Fiverr</h3>
+                <h4>November 2023 – Present</h4>
+                <p class="role">Freelance Book Designer</p>
+                <p class="type">Freelancing</p>
+                <ul>
+                    <li>Designed custom book covers for diverse genres, meeting clients' creative and branding needs.</li>
+                    <li>Developed formatting and layout designs for print and digital book publications.</li>
+                    <li>Managed client communication, ensuring timely delivery and high customer satisfaction ratings.</li>
+                    <li>Utilized Adobe Creative Suite, including Photoshop and InDesign, to create polished designs.</li>
+                </ul>
+            </div>
 
             <div class="experience-item">
               <h3>Court of Appeal, Beni Mellal</h3>
@@ -208,6 +284,7 @@
               <h3>Club Digitack, FEG Beni Mellal</h3>
               <h4>November 2021 – June 2022 (7 months)</h4>
               <p class="role">Digital Marketing Managerr</p>
+              <p class="type">Internship</p>
               <ul>
                 <li>Increased visibility and engagement through social media platforms.</li>
                 <li>Created content and managed online campaigns to promote events.</li>
@@ -222,18 +299,20 @@
         <!-- First Education Item -->
         <div class="education-item">
             <div class="education-header">
-                <p>2022 - 2024</p>
+                <span class="education-year">2022 - 2024</span>
             </div>
             <h3>Specialized Technician in Web Development</h3>
             <h4>Institut Specialise de Technologie Appliquee, Beni Mellal</h4>
             <div class="projects">
-                <p><span>Front-End:</span> HTML, CSS, JavaScript, React.js, Bootstrap.</p>
-                <p><span>Back-End:</span> PHP, Laravel, Node.js.</p>
-                <p><span>API Development:</span> RESTful APIs.</p>
-                <p><span>Database Management:</span> MySQL, MongoDB.</p>
-                <p><span>Version Control:</span> Git, GitHub, GitLab.</p>
-                <p><span>Agile Methodologies:</span> Scrum, Kanban.</p>
-                <p><span>Other Skills:</span> Docker, CI/CD, WebSockets, Authentication.</p>
+                <ul>
+                    <li><strong>Front-End:</strong> HTML, CSS, JavaScript, React.js, Bootstrap.</li>
+                    <li><strong>Back-End:</strong> PHP, Laravel, Node.js.</li>
+                    <li><strong>API Development:</strong> RESTful APIs.</li>
+                    <li><strong>Database Management:</strong> MySQL, MongoDB.</li>
+                    <li><strong>Version Control:</strong> Git, GitHub, GitLab.</li>
+                    <li><strong>Agile Methodologies:</strong> Scrum, Kanban.</li>
+                    <li><strong>Other Skills:</strong> Docker, CI/CD, WebSockets, Authentication.</li>
+                </ul>
             </div>
         </div>
 
@@ -242,7 +321,7 @@
         <!-- Second Education Item -->
         <div class="education-item">
             <div class="education-header">
-                <p>2022 - 2024</p>
+                <span class="education-year">2022 - 2024</span>
             </div>
             <h3>Bachelor in in Physical Sciences</h3>
             <h4>Hassan II High School, Beni Mellal</h4>
@@ -282,9 +361,9 @@
             <div class="portfolio-box">
                 <img src="img/1_portfolio.png" alt="">
                 <div class="portfolio-layer">
-                    <h4>DAOUD.DEV</h4>
+                    <h4>YASSINE DAOUD</h4>
                     <p>Personal Portfolio Website</p>
-                    <a href="https://www.linkedin.com/in/daoudyassine/" target="_blank">
+                    <a href="https://www.yassine-daoud.site/" target="_blank">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
@@ -293,9 +372,9 @@
             <div class="portfolio-box">
                 <img src="img/2_Mediapro.png" alt="">
                 <div class="portfolio-layer">
-                    <h4>Mediapro</h4>
-                    <p>(In Progress)</p>
-                    <a href="https://www.linkedin.com/in/daoudyassine/" target="_blank">
+                    <h4>BRAND NEST</h4>
+                    <p>Marketing Agency Website</p>
+                    <a href="https://brand-nest.netlify.app/" target="_blank">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
@@ -351,31 +430,43 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form id="contact-form" action="https://formspree.io/f/movqzwol" method="POST">
+        <form name="contact-us-portfolio" id="contact-us-portfolio">
             <div class="input-box">
-                <input type="text" name="name" id="name" placeholder="Full Name" required>
-                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                <input type="text" name="name" id="name" placeholder="Full Name*" required>
+                <input type="number" name="phone-number" id="phone-number" placeholder="Phone Number">
+
             </div>
 
             <div class="input-box">
-                <input type="number" name="telefone" id="telefone" placeholder="Phone Number">
-                <input type="text" name="subject" id="subject" placeholder="Email Subject" required>
+                <input type="email" name="email" id="email" placeholder="Email Address*" required>
+                <input type="text" name="subject" id="subject" placeholder="Email Subject">
             </div>
 
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message..." required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
+    </main>
 
-    <!-- Footer Design -->
+    <!-- Updated Footer Design -->
     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by @daoud.dev | All Rights Reserved.</p>
-        </div>
-        <div class="footer-iconTop">
-            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        <div class="footer-container">
+            <div class="footer-text">
+                <p>&copy; 2024 <strong class="colored">YASSINE DAOUD</strong> | All rights reserved.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+
 
     <!-- Scrol Reveal JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -385,5 +476,7 @@
 
     <!-- MAin JS -->
      <script src="js/main.js"></script>
+    <!--Form Js link -->
+  <script src="js/form.js" defer></script>
 </body>
 </html>

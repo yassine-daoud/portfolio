@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500;700&display=swap');
+
 /* Logo font */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 * {
@@ -9,7 +11,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*OlD
@@ -30,13 +32,26 @@
   --main-color: #FFC400;
 } */
 
+/* Main Dark Color------------------------------------
 :root {
-  --bg-color: #121820;
   --snd-bg-color: #1c2635;
+  --bg-color: #121820;
   --text-color: #e0e0e0;
   --main-color: #4a90e2;
+} */
+
+:root {
+  --bg-color: #ffffff; /* Primary Background Color */
+  --snd-bg-color: #f4f4f6; /* Subtle light gray for sections */
+  --text-color: #333333; /* Default Text Color */
+  --main-color: #0078d4; /* Vibrant Blue for Accent */
+  --accent-color: #f25c54; /* Warm Coral for Highlights */
 }
 
+h1 ,
+h2 {
+  color: black;
+}
 
 
 html {
@@ -51,7 +66,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 5rem 9% 5rem;
+  padding: 9rem 9% 9rem;
 }
 
 .heading {
@@ -64,32 +79,66 @@ section {
   color: var(--main-color);
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Move back to original position */
+  }
+}
 /* NavBar ----------------------------------------------------*/
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 9%;
+  padding: 1.5rem 8%;
   background-color: var(--bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: var(--text-color);
   font-weight: 700;
   cursor: pointer;
 }
 
-.navbar a{
-  font-size: 1.7rem;
+.navbar {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar a {
+  font-size: 1.8rem;
   color: var(--text-color);
-  margin-left: 4rem;
-  font-weight: 700;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.navbar a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  transition: width 0.3s;
+  margin-top: 5px;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
 }
 
 /* DAOUD.Dev Style */
@@ -114,17 +163,21 @@ section {
 }
 
 #menu-icon {
-  font-size: 3.6rem;
+  font-size: 3.5rem;
   color: var(--text-color);
+  cursor: pointer;
   display: none;
 }
 
-/* Home Section ----------------------------------------------------*/
+/* Hero Section ----------------------------------------------------*/
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 10rem;
+  gap: 7rem;
+  font-family: 'Roboto';
+  margin-top: 2rem;
 }
 
 .home-content h3{
@@ -132,52 +185,72 @@ section {
   font-weight: 700;
   color: var(--main-color);
   margin-bottom: 1.5rem;
+
+  font-family: 'Poppins', sans-serif;
 }
 
 .home-content h1 {
-  font-size: 5.6rem;
+  font-size: 5.5rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.1;
+  font-family: 'Poppins', sans-serif;
 }
 
 .home-img img {
-  width: 25vw;
-  animation: floatImage 4s ease-in-out infinite;
+  width: 32vw;
+  height: auto;
+  border-radius: 50%;
+  animation: fadeInUp 1s ease-out, float 6s ease-in-out infinite;
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), filter 0.4s ease;
+  box-shadow: 0 0 20px #0000003a;
 }
 
 h1 span {
   color: var(--main-color);
 }
 
-@keyframes floatImage {
+/* Floating effect for subtle movement */
+@keyframes float {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-2.4rem);
+    transform: translateY(-20px);
   }
   100% {
     transform: translateY(0);
   }
 }
 
+/* Fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .home-content p {
   font-size: 1.7rem;
-  padding-right: 5rem;
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
 .social-media a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  padding: 10px;
   background: transparent;
   border: .2rem solid var(--main-color);
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--main-color);
-  margin: 3rem 1.5rem 3rem 0;
+  margin: 1.5rem 1.3rem 1.8rem 0;
   transition: .5s ease;
 }
 
@@ -192,8 +265,8 @@ h1 span {
   padding: 1rem 2.8rem;
   background: var(--main-color);
   border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-color);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
   color: var(--bg-color);
   letter-spacing: .1rem;
   font-weight: 600;
@@ -201,8 +274,16 @@ h1 span {
 }
 
 .btn:hover {
-  box-shadow: none;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px var(--main-color);
 }
+
+.btn:hover i{
+  animation: bounce 0.5s infinite;
+}
+
+
+
 
 /* About Section ----------------------------------------------------*/
 .about{
@@ -214,12 +295,19 @@ h1 span {
 }
 
 .about-img img {
-  width: 25vw;
+  width: 35vw;
 }
+
+.about-img img {
+  border-radius: 15px;
+  box-shadow: 0 10px 20px var(--text-color);
+}
+
 
 .about-content h2 {
   text-align: left;
   line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
 }
 
 .about-content h3 {
@@ -229,6 +317,41 @@ h1 span {
 .about-content p {
   font-size: 1.7rem;
   margin: 2rem 0 3rem;
+  line-height: 1.6;
+  color: var(--text-color);
+
+}
+
+.about-content .btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  margin-right: 1rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: var(--main-color);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+
+.secondary-btn:hover {
+  background-color: var(--main-color);
+  color: #fff;
 }
 
 /* Skills Section ----------------------------------------------------*/
@@ -238,7 +361,12 @@ h1 span {
   align-items: flex-start;
   gap: 4rem;
   position: relative;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.skills h2 {
+  font-family: 'Poppins', sans-serif;
 }
 
 .skills-column {
@@ -291,12 +419,12 @@ h1 span {
 }
 
 .skill-item:hover {
-  transform: scale(1.2) !important;
+  transform: scale(1.1) !important;
 }
 
 .skill-item:hover i,
 .skill-item:hover span {
-  color: white; /* Change color to white */
+  color: var(--main-color); /* Change color to white */
 }
 
 .skills-column h4 {
@@ -314,6 +442,7 @@ h1 span {
   position: absolute;
   left: 50%; /* Center the line between columns */
   transform: translateX(-50%);
+  border-radius: 4px;
 }
 
 /* Experience Section ----------------------------------------------------*/
@@ -321,25 +450,35 @@ h1 span {
   background: var(--snd-bg-color);
 }
 
+.experience h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
 .experience-item {
   display: flex;
   flex-direction: column;
   border-left: 0.3rem solid var(--main-color);
   margin-bottom: 3rem;
-  padding-left: 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05); /* Subtle background for the item */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Modern shadow effect */
 }
 
 
 .experience-item h3 {
+  font-family: 'Poppins', sans-serif;
   font-size: 2.4rem;
   font-weight: bold;
   color: var(--text-color);
+  margin-bottom: 0.5rem;
 }
 
 .experience-item h4 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: normal;
   color: gray;
+  margin-bottom: 1rem;
 }
 
 .experience-item .role {
@@ -352,7 +491,7 @@ h1 span {
   font-size: 1.6rem;
   font-style: italic;
   color: var(--text-color);
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
 }
 
 .experience-item ul {
@@ -364,18 +503,28 @@ h1 span {
   font-size: 1.6rem;
   color: gray;
   margin: 0.8rem 0;
+  line-height: 1.6;
 }
 
 .experience-item ul li::before {
-  content: "– ";
+  content: "• ";
   color: var(--main-color);
+  font-weight: bold;
   margin-right: 0.5rem;
 }
 
 
 /* Portfolio Section ----------------------------------------------------*/
+.portfolio {
+  background: linear-gradient(135deg, #f4f4f6, #c7eaff); /* Softer light gray to light blue */
+}
+
 .portfolio h2 {
   margin-bottom: 4rem;
+}
+
+.portfolio h4, p {
+  color: var(--snd-bg-color);
 }
 
 .portfolio-container {
@@ -396,7 +545,7 @@ h1 span {
 .portfolio-box img {
   width: 100%;
   transition: .5s ease;
-  opacity: .7;
+  opacity: .8;
 }
 
 .portfolio-box:hover img {
@@ -453,41 +602,72 @@ h1 span {
   background: var(--bg-color);
 }
 
+
+
+
+.education h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.education-item h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0.7rem 0;
+}
+
+.education-item h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: gray;
+  margin-bottom: 1.5rem;
+}
+
+.education-item {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05); /* Subtle card background */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Card shadow effect */
+}
+
 .education-header {
   font-size: 1.6rem;
   color: var(--main-color);
   margin-bottom: 1.5rem;
 }
 
-.education-item h3 {
-  font-size: 2.4rem; /* Degree title size */
-  font-weight: 700; /* Emphasize degree */
-  margin-bottom: 0.5rem;
-  color: var(--text-color); /* Text in white */
+.education-year {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--main-color);
+  background: rgba(0, 120, 212, 0.2); /* Highlight year */
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
 }
 
-.education-item h4 {
-  font-size: 2rem; /* University name size */
-  color: gray; /* Muted gray for the university */
-  margin-bottom: 1rem;
+.projects ul {
+  list-style: none;
+  padding-left: 1.2rem;
 }
 
-
-.projects p {
-  font-size: 1.6rem; /* Project description size */
-  padding-bottom: .5rem;
-  color: var(--text-color); /* White for descriptions */
+.projects li {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin: 0.8rem 0;
 }
 
-.projects p span {
-  color: var(--main-color); /* Highlighted project titles */
+.projects li::before {
+  content: "• ";
+  color: var(--main-color);
+  font-weight: bold;
+  margin-right: 0.5rem;
 }
 
 hr {
-  border: 0;
-  height: 1px;
-  background: #444; /* Divider color */
-  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
 }
 
 
@@ -615,35 +795,108 @@ hr {
 /* Footer Design ----------------------------------------------------*/
 
 .footer {
+  background-color: #101820;
+  color: #fff;
+  padding: 3rem 9%;
+  font-family: 'Arial', sans-serif;
+  border-top: 3px solid var(--main-color);
+}
+
+.footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 9%;
 }
 
 .footer-text {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  flex: 1;
+  line-height: 1.8;
 }
 
-.footer-iconTop {
-  display: inline-flex;
+.colored {
+  color: var(--main-color);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
   justify-content: center;
-  align-items: center;
-  padding: .8rem 1rem;
-  background: var(--main-color);
-  border-radius: .9rem;
-  transition: .5s ease;
 }
 
-.footer-iconTop a:hover {
-  box-shadow: 0 0 1rem var(--main-color);
+.footer-socials a {
+  font-size: 2.6rem;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
-.footer-iconTop a i {
-  font-size: 2.4rem;
-  color: var(--bg-color);
+.footer-socials a:hover {
+  color: var(--main-color);
 }
+
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-socials {
+    margin: 1.5rem 0;
+  }
+
+  .footer-text {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/*-----------------------------------*\
+  #BACK TO TOP
+\*-----------------------------------*/
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the screen */
+  right: 20px; /* Distance from the right side of the screen */
+  background-color: #007bff; /* Change to match your website's primary color */
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 13px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 1000; /* Ensure it's on top of other elements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:hover {
+  background-color: #0056b3; /* Slightly darker shade for hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.back-to-top i {
+  pointer-events: none; /* Prevent icon from interfering with clicks */
+}
+
+/* Make the button visible after scrolling down */
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Initial hidden state */
+.back-to-top {
+  transform: translateY(20px); /* Slightly below the initial position */
+}
+
+
+
 
 /* Media Query ----------------------------------------------------*/
 @media (max-width: 1200px) {
@@ -713,6 +966,8 @@ hr {
 
   .home {
     flex-direction: column;
+    padding-top: 3rem;
+    gap: 1rem;
   }
 
   .home-content {
@@ -738,7 +993,7 @@ hr {
   }
 
   .about-img img {
-    width: 90vw;
+    width: 30vw;
     margin-top: 4rem;
   }
 
@@ -758,7 +1013,7 @@ hr {
   }
 
   .about-img img {
-    width: 100vw;
+    width: 90vw;
     margin-top: 3rem;
   }
 }
@@ -814,7 +1069,7 @@ hr {
 /* Responsive CSS for Education Section: ----------------------------------------------------*/
 @media (max-width: 768px) {
   .education-item {
-    padding: 1rem 0;
+    padding: 1.2rem;
   }
 
   .education-item h3 {
@@ -825,7 +1080,7 @@ hr {
     font-size: 1.8rem;
   }
 
-  .projects p {
+  .projects span {
     font-size: 1.4rem;
   }
 }
